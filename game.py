@@ -10,11 +10,14 @@ print('choose a random number between 1 and 100')
 while (randomNumber != int(guessNumber)):
     guessNumber = input('what is your guess: ')
     trueNumber = int(guessNumber)
-    if trueNumber > randomNumber :
-        guessCounter += 1
-        print('number is lower')
-    if trueNumber < randomNumber :
-        guessCounter += 1
-        print('number is higher')
+    if trueNumber > 100 or trueNumber < 1: 
+        print('you put a invalid number in try again')
+    else: 
+        if trueNumber > randomNumber :
+            guessCounter += 1
+            print('number is lower')
+        if trueNumber < randomNumber :
+            guessCounter += 1
+            print('number is higher')
 else: 
     print('congrates on guessing correctly ' + name + ' you did it with ' + str(guessCounter) + ' guesses')
